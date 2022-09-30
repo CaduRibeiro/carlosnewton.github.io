@@ -1,0 +1,65 @@
+/* Fonts */
+@font-face {
+  font-family: "Canaro SemiBold";
+  src: local("Canaro SemiBold"), local("Canaro-SemiBold"),
+    url("../fonts/Canaro/Canaro-SemiBold.woff2") format("woff2"),
+    url("../fonts/Canaro/Canaro-SemiBold.woff") format("woff"),
+    url("../fonts/Canaro/Canaro-SemiBold.ttf") format("truetype"),
+    url("../fonts/Canaro/Canaro-SemiBold.eot"),
+    url("../fonts/Canaro/Canaro-SemiBold.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canaro Light";
+  src: local("Canaro Light"), local("Canaro-Light"),
+    url("../fonts/Canaro/Canaro-Light.woff2") format("woff2"),
+    url("../fonts/Canaro/Canaro-Light.woff") format("woff"),
+    url("../fonts/Canaro/Canaro-Light.ttf") format("truetype"),
+    url("../fonts/Canaro/Canaro-Light.eot"),
+    url("../fonts/Canaro/Canaro-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canaro Medium";
+  src: local("Canaro Medium"), local("Canaro Medium"),
+    url("../fonts/Canaro/Canaro-Medium.woff2") format("woff2"),
+    url("../fonts/Canaro/Canaro-Medium.woff") format("woff"),
+    url("../fonts/Canaro/Canaro-Medium.ttf") format("truetype"),
+    url("../fonts/Canaro/Canaro-Medium.eot"),
+    url("../fonts/Canaro/Canaro-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canaro Extra-Light";
+  src: local("Canaro Extra-Light"), local("Canaro-ExtraLight"),
+    url("../fonts/Canaro/Canaro-ExtraLight.woff2") format("woff2"),
+    url("../fonts/Canaro/Canaro-ExtraLight.woff") format("woff"),
+    url("../fonts/Canaro/Canaro-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Canaro/Canaro-ExtraLight.eot"),
+    url("../fonts/Canaro/Canaro-ExtraLight.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url("SegoeUI-Regular.woff2") format("woff2"),
+    url("SegoeUI-Regular.woff") format("woff"),
+    url("SegoeUI-Regular.ttf") format("truetype"), url("SegoeUI-Regular.eot"),
+    url("SegoeUI-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,116 @@
+/* Variables */
+
+/* Color  */
+$white: #ffffff;
+$black: #000000;
+$dark-gray: #333;
+$medium-gray: #575756;
+$gray: #848484;
+$light-gray: #fbfbfb;
+$red: #e42313;
+$light-redm: #dc5347;
+
+$form-bg-gray: #9c9c9c29;
+$form-field-gray: #f1f1f1bd;
+
+// Breakpoints
+$break-medium-mobile: 479px;
+$break-max-mobile: 767px;
+$break-min-mobile: 375px;
+$break-tablet: 1023px;
+$break-tablet-landscape: 1024px;
+$break-min-desktop: 1199px;
+$break-medium-desktop: 1366px;
+$break-large-desktop: 1600px;
+
+/* Base */
+
+body {
+  background-color: $white;
+  color: $medium-gray;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.4;
+  margin-bottom: 1.125rem;
+}
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.875rem;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 1rem;
+  color: $medium-gray;
+  line-height: 1.4;
+}
+
+/* Utility classes */
+
+.wow {
+  visibility: hidden;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+
+  @media (max-width: $break-min-desktop) {
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+
+  @media (max-width: $break-max-mobile) {
+    margin: 0 1rem;
+  }
+}
+
+.txt-white {
+  color: $white;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/* Fonts */
+.canaro-semi {
+  font-family: "Canaro SemiBold", Arial, Helvetica, sans-serif !important;
+}
+
+.canaro-light {
+  font-family: "Canaro Light", Arial, Helvetica, sans-serif !important;
+}
+
+.canaro {
+  font-family: "Canaro Medium", Arial, Helvetica, sans-serif !important;
+}
+
+.canaro-ex-light {
+  font-family: "Canaro Extra-Light", Arial, Helvetica, sans-serif !important;
+}
+
+.segoe ui {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
