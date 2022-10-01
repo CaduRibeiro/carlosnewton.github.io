@@ -27,12 +27,25 @@ $.fn.scrollExecutar = function (pos, seletor, align, compl) {
   });
 };
 
+$.fn.loadingAtivar = function () {
+  let button = $("#submit");
+  button.addClass("disabled");
+  button.html("Enviando...");
+}
+
+$.fn.loadingDesativar = function () {
+  let button = $("#submit");
+  button.removeClass("disabled");
+  button.html("Enviar");
+}
+
+
 $.fn.FormExecuteAjax = function (obj) {
 
   // var divScroll = $(obj).data("div-scroll");
   // var header_top = $("header").height();
 
-  // $.fn.loadingAtivar();
+  $.fn.loadingAtivar();
   // $("input[type=submit]").addClass('disabled');
   // if (typeof (divScroll) != 'undefined' && divScroll != '') $.fn.scrollExecutar(0, divScroll, "top", header_top);
   // else $.fn.scrollExecutar(0);
@@ -51,40 +64,42 @@ $.fn.FormExecuteAjax = function (obj) {
     function (data) {
 
       console.log(data);
-      // $.fn.loadingDesativar();
-      $("input[type=submit]").removeClass('disabled');
+      $.fn.loadingDesativar();
 
       if (data.et == 1) {
-        // $.fn.toastAbrir(data.emsg, "err", data.ecmp);
-        $(obj).find(".alert").removeClass("alert");
-        $('#' + data.ecmp).parent().addClass('alert');
+        $.toast({
+          heading: 'Erro',
+          text: data.emsg,
+          showHideTransition: 'fade',
+          position: 'top-center',
+          icon: 'error'
+        });
 
-      } else if (typeof (data.url) == "undefined" && data.et == 0) {
-        // $.fn.toastAbrir(data.emsg, "ok", data.ecmp, 5000);
-        $(obj).find(".alert").removeClass("alert");
+      } else {
+        $.toast({
+          heading: 'Sucesso',
+          text: data.emsg,
+          showHideTransition: 'fade',
+          position: 'top-center',
+          icon: 'success'
+        });
 
         /* Hide and reset the form */
         $('#' + formID)[0].reset();
-        grecaptcha.reset();
-
-      } else if (typeof (data.url) != "undefined" && data.et == 0 && data.url != "") {
-        // $.fn.toastAbrir(data.emsg, "ok", data.ecmp);
-        grecaptcha.reset();
-        // $.fn.urlRedirecionar(data.url);
-
-      } else {
-        // $.fn.toastAbrir("Failure to process the requisition - COD: PHP ERROR", "err");
 
       }
     }
   )
     .fail(
       function () {
-
-        console.log("fail");
-        // $.fn.loadingDesativar();
-        $("input[type=submit]").removeClass('disabled');
-        // $.fn.toastAbrir("Failure to process the requisition - COD: AJAX ERROR", "err");
+        $.fn.loadingDesativar();
+        $.toast({
+          heading: 'Erro',
+          text: "Failure to process the requisition - COD: AJAX ERROR",
+          showHideTransition: 'fade',
+          position: 'top-center',
+          icon: 'error'
+        });
       }
     );
 }
@@ -136,8 +151,6 @@ $(document).ready(function () {
     event.preventDefault();
 
     let form = $("#contactForm");
-
-    console.log("HERE");
 
     $.fn.FormExecuteAjax(form);
   });

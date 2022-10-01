@@ -72,6 +72,10 @@ span {
   visibility: hidden;
 }
 
+body .jq-toast-wrap {
+  z-index: 999999 !important;
+}
+
 .container {
   max-width: 1128px;
   margin: 0 auto;
