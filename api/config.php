@@ -13,9 +13,6 @@ define("MAIL_FROM_NAME",  "Carlos Ribeiro");
 define("MAIL_TO_ADDRESS", "carlostip4@hotmail.com");
 define("MAIL_TO_NAME",  "Carlos");
 
-/* RECAPTHCA */
-// define("RECAPTCHA_SECRET_KEY", "6Le-1MsbAAAAAFbErSyMOn9IsemfeQk49JtKfQWS");
-
 /* Erros messages */
 define("E001", "Campo obligatório");
 define("E002", "Nome - " . E001);
