@@ -42,28 +42,17 @@ $.fn.loadingDesativar = function () {
 
 $.fn.FormExecuteAjax = function (obj) {
 
-  // var divScroll = $(obj).data("div-scroll");
-  // var header_top = $("header").height();
-
   $.fn.loadingAtivar();
-  // $("input[type=submit]").addClass('disabled');
-  // if (typeof (divScroll) != 'undefined' && divScroll != '') $.fn.scrollExecutar(0, divScroll, "top", header_top);
-  // else $.fn.scrollExecutar(0);
 
   var formID = $(obj).attr("id");
   var fields = $(obj).serialize();
   var action = $(obj).attr("action");
-
-  console.log(formID);
-  console.log(fields);
-  console.log(action);
 
   var jqxhr = $.post(
     action,
     fields,
     function (data) {
 
-      console.log(data);
       $.fn.loadingDesativar();
 
       if (data.et == 1) {
@@ -142,17 +131,25 @@ $(document).ready(function () {
     let data = $(this).attr("data-anchor");
     let header = $("header").height();
 
+    $("nav").toggleClass("open");
+    $("#icon-01").toggleClass("active");
+
     $.fn.scrollExecutar(0, " #" + data, "top", header);
   });
 
-
-
+  // Ajax call 
   $(this).on("click", ".actFormExecuteAjax", function (event) {
     event.preventDefault();
 
     let form = $("#contactForm");
 
     $.fn.FormExecuteAjax(form);
+  });
+
+  $("#icon-01").on('click', function (event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+    $("nav").toggleClass("open");
   });
 });
 
