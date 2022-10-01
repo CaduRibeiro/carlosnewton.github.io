@@ -5,6 +5,7 @@ Plugin utilizados:
 - animate.css
 - jquery.toast
 - lightbox
+- Slick slide
 
 
 Para o desenvolvimento, utilizei o Sass para acelerar o desenvolvimento com o auxilio do gulp para processar toda as atualizações necessárias, autoprefixação, minificação, etc.
